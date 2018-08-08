@@ -21,7 +21,9 @@ def requestion_solution_for_unknown_problem(context):
 
 @then("The response contains '{key}'")
 def verify_response_has_key(context, key):
-    context.test.assertTrue(key in context.response.json(), f"Key: {key} was not found in response")
+    context.test.assertTrue(
+        key in context.response.json(), f"Key: {key} was not found in response"
+    )
 
 
 @step("The response contains '{key}' with value {value:d}")
