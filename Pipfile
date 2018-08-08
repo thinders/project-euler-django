@@ -5,8 +5,10 @@ name = "pypi"
 
 [packages]
 django = "*"
+requests = "*"
 
 [dev-packages]
+behave-django = "*"
 
 [requires]
 python_version = "3.6"
