@@ -8,14 +8,17 @@ def problem(request, num):
     try:
         module = importlib.import_module(f".solutions.problem_{num}", "problems")
     except ModuleNotFoundError:
-        return JsonResponse(
-            {"error": "Problem does not exist or has not been solved"}, status=404
-        )
+        error = {"error": "Problem does not exist or has not been solved"}
+        return JsonResponse(error, status=404)
 
+    problem_title = getattr(module, "problem_title")
+    problem_statement = getattr(module, "problem_statement")
     start = time.time()
     solution = getattr(module, "solve")()
     response = {
-        "problem": num,
+        "problemTitle": problem_title,
+        "problemStatement": problem_statement,
+        "problemNumber": num,
         "solution": solution,
         "timeToSolve": time.time() - start,
     }

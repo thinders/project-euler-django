@@ -8,4 +8,6 @@ Feature: I got 99 problems
     When I request solution for problem 1
     Then The response contains 'solution' with value 233168
     And The response contains 'timeToSolve'
-    And The response contains 'problem' with value 1
+    And The response contains 'problemTitle'
+    And The response contains 'problemStatement'
+    And The response contains 'problemNumber' with value 1

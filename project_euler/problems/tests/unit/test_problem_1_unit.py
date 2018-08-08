@@ -8,4 +8,4 @@ class Problem1Tests(SimpleTestCase):
         self.assertEqual(23, problem_1.solve(10))
 
     def test_solve_with_1000(self):
-        self.assertEqual(233168, problem_1.solve(1000))
+        self.assertEqual(233168, problem_1.solve())
