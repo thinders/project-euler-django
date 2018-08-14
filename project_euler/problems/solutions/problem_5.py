@@ -17,5 +17,3 @@ def solve(num=20):
                 break
             if i == 2:
                 return current
-
-
