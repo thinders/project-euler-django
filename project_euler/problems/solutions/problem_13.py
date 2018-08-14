@@ -208,5 +208,4 @@ numbers = [
 
 
 def solve():
-    the_sum = sum(numbers)
-    return str(the_sum)[0:10]
+    return str(sum(numbers))[0:10]
