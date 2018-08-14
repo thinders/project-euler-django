@@ -1,5 +1,5 @@
 problem_title = ""
-problem_statement = ("")
+problem_statement = ""
 
 
 def solve():
