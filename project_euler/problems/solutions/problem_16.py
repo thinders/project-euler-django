@@ -5,13 +5,16 @@ problem_statement = (
 )
 
 
+def sum_digits(mul):
+    total = 0
+    for x in str(mul):
+        total += int(x)
+    return total
+
+
 def solve(num=1000):
     mul = 2
     for i in range(1, num):
         mul *= 2
 
-    sum = 0
-    for x in str(mul):
-        sum += int(x)
-
-    return sum
+    return sum_digits(mul)
